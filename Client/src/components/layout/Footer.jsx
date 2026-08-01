@@ -25,7 +25,6 @@ const Footer = () => {
 
         </div>
 
-
         <div className="footer-column">
 
           <h4>Product</h4>
@@ -67,7 +66,6 @@ const Footer = () => {
         </div>
 
       </div>
-
 
       <div className="footer-bottom">
 

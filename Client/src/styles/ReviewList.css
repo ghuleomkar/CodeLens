@@ -144,9 +144,7 @@
 }
 
 
-/* =========================
-   LIST ITEMS
-========================= */
+/*  LIST ITEMS */
 
 .review-items {
   display: flex;
@@ -177,9 +175,7 @@
 }
 
 
-/* =========================
-   EMPTY STATE
-========================= */
+/* EMPTY STATE */
 
 .empty-reviews {
   padding: 70px 30px;
@@ -212,9 +208,7 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*  RESPONSIVE */
 
 @media (max-width: 700px) {
 
@@ -257,11 +251,6 @@
 .review-details {
   margin-top: 20px;
 }
-
-
-
-
-
 
 /* new */
 .review-markdown p {

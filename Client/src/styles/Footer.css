@@ -1,6 +1,4 @@
-/* =========================
-   SITE FOOTER
-========================= */
+/* SITE FOOTER */
 
 .site-footer {
   position: relative;
@@ -15,9 +13,7 @@
 }
 
 
-/* =========================
-   MAIN FOOTER
-========================= */
+/* MAIN FOOTER */
 
 .footer-main {
   max-width: 1400px;
@@ -30,9 +26,7 @@
 }
 
 
-/* =========================
-   BRAND
-========================= */
+/* BRAND */
 
 .footer-brand {
   max-width: 360px;
@@ -59,9 +53,7 @@
 }
 
 
-/* =========================
-   STATUS
-========================= */
+/*  STATUS */
 
 .footer-status {
   display: inline-flex;
@@ -92,9 +84,7 @@
 }
 
 
-/* =========================
-   FOOTER COLUMNS
-========================= */
+/* FOOTER COLUMNS */
 
 .footer-column {
   display: flex;
@@ -130,9 +120,7 @@
 }
 
 
-/* =========================
-   BOTTOM BAR
-========================= */
+/*  BOTTOM BAR */
 
 .footer-bottom {
   max-width: 1400px;
@@ -155,9 +143,7 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
 

@@ -100,9 +100,7 @@
   font-size: 11px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*  RESPONSIVE */
 
 @media (max-width: 1000px) {
   .hero-section {
@@ -166,9 +164,7 @@
 }
 
 
-/* =========================
-   REPOSITORY ANALYSIS PAGE
-========================= */
+/* REPOSITORY ANALYSIS PAGE */
 
 .repository-page {
   min-height: 100vh;
@@ -181,13 +177,6 @@
     #09090b;
   color: #f4f4f5;
 }
-
-
-
-
-
-
-
 
 .analyze-loading{
     margin-top:20px;
@@ -222,16 +211,6 @@
     }
 
 }
-
-
-
-
-
-
-
-
-
-
 
 .analyze-success{
 

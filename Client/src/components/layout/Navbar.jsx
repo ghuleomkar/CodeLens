@@ -1,7 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-
 import { useAuth } from "../../context/AuthContext";
-
 import "../../styles/Navbar.css";
 
 
@@ -23,13 +21,11 @@ const Navbar = () => {
 
   };
 
-
   return (
 
     <header className="navbar">
 
       <div className="navbar-container">
-
 
         {/* LOGO */}
 
@@ -66,27 +62,18 @@ const Navbar = () => {
 
 
           {user ? (
-
             <>
-
               <span className="navbar-username">
-
                 Hi, {user.username}
-
               </span>
-
 
               <button
                 className="logout-btn"
                 onClick={handleLogout}
               >
-
                 Logout
-
               </button>
-
             </>
-
           ) : (
 
             <>
@@ -95,9 +82,7 @@ const Navbar = () => {
                 to="/login"
                 className="login-btn"
               >
-
                 Login
-
               </Link>
 
 
@@ -105,25 +90,17 @@ const Navbar = () => {
                 to="/register"
                 className="register-btn"
               >
-
                 Register
-
               </Link>
-
             </>
 
           )}
 
 
         </div>
-
-
       </div>
-
     </header>
-
   );
-
 };
 
 

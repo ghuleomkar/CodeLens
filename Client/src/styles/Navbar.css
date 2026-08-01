@@ -6,12 +6,8 @@
   left: 0;
   width: 100%;
   z-index: 999;
-
   backdrop-filter: blur(20px);
-
-  /* तुझ्याकडे typo होता: rgba(9,9,11,.0.7) ❌ */
   background: rgba(9, 9, 11, 0.7);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -118,9 +114,7 @@
 }
 
 
-/* =========================
-   USERNAME
-========================= */
+/* USERNAME */
 
 .navbar-username {
   display: inline-flex;
@@ -135,9 +129,7 @@
 }
 
 
-/* =========================
-   LOGOUT
-========================= */
+/* LOGOUT */
 
 .logout-btn {
   display: inline-flex;
@@ -170,9 +162,7 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
@@ -189,20 +179,3 @@
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

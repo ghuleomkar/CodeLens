@@ -53,11 +53,7 @@
   color: #8b949e;
 }
 
-
-
-/* =========================
-   REPOSITORY LOADING
-========================= */
+/* REPOSITORY LOADING */
 
 .repository-loading-page {
   min-height: 100vh;
@@ -113,8 +109,6 @@
     transform: scale(1);
   }
 }
-
-
 
 /* search bar */
 .review-search{
