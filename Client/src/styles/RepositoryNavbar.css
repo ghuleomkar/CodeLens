@@ -1,0 +1,89 @@
+.repository-navbar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  border-bottom: 1px solid #21262d;
+
+  background: #0d1117;
+}
+
+.repository-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #f0f6fc;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #30363d;
+  border-radius: 8px;
+
+  color: #58a6ff;
+
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.brand-name {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.repository-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.analysis-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #8b949e;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #3fb950;
+  box-shadow: 0 0 8px rgba(63, 185, 80, 0.5);
+}
+
+.new-analysis-button {
+  padding: 9px 15px;
+
+  border: 1px solid #30363d;
+  border-radius: 7px;
+
+  color: #c9d1d9;
+  background: #161b22;
+
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.new-analysis-button:hover {
+  border-color: #58a6ff;
+  color: #58a6ff;
+}

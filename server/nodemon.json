@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ignore": [
+    "src/temp/repositories"
+  ]
+}

@@ -1,0 +1,196 @@
+/* =========================
+   SITE FOOTER
+========================= */
+
+.site-footer {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(124, 58, 237, 0.08),
+      transparent 35%
+    ),
+    #09090b;
+}
+
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 60px 60px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand {
+  max-width: 360px;
+}
+
+.footer-logo {
+  color: #f4f4f5;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.footer-logo span {
+  color: #a78bfa;
+}
+
+.footer-brand p {
+  max-width: 320px;
+  margin-top: 16px;
+
+  color: #71717a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.footer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 24px;
+  padding: 8px 12px;
+
+  border: 1px solid rgba(74, 222, 128, 0.18);
+  border-radius: 7px;
+
+  color: #71717a;
+  background: rgba(74, 222, 128, 0.04);
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: #4ade80;
+
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.8);
+}
+
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-column h4 {
+  margin-bottom: 6px;
+
+  color: #e4e4e7;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-column span {
+  width: fit-content;
+
+  color: #71717a;
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #a78bfa;
+  transform: translateX(3px);
+}
+
+
+/* =========================
+   BOTTOM BAR
+========================= */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 22px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  color: #52525b;
+  font-size: 11px;
+}
+
+.footer-tech {
+  color: #52525b;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+
+    padding: 50px 22px 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 20px 22px;
+  }
+
+}

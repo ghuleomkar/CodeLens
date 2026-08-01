@@ -1,0 +1,148 @@
+.repository-page {
+  min-height: 100vh;
+  background: #0b0d10;
+  color: #e5e7eb;
+}
+
+.repository-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 32px 80px;
+}
+
+.repository-loading,
+.repository-error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0b0d10;
+  color: #e5e7eb;
+}
+
+.repository-loading p {
+  margin-top: 16px;
+  color: #8b949e;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #30363d;
+  border-top-color: #58a6ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.repository-error {
+  gap: 10px;
+}
+
+.repository-error h2 {
+  color: #f85149;
+}
+
+.repository-error p {
+  color: #8b949e;
+}
+
+
+
+/* =========================
+   REPOSITORY LOADING
+========================= */
+
+.repository-loading-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(124, 58, 237, 0.12),
+      transparent 40%
+    ),
+    #09090b;
+}
+
+.repository-loader {
+  text-align: center;
+}
+
+.loader-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 24px;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 16px;
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.08);
+  font-size: 24px;
+  animation: loader-pulse 1.5s ease-in-out infinite;
+}
+
+.repository-loader h2 {
+  color: #f4f4f5;
+  font-size: 20px;
+}
+
+.repository-loader p {
+  margin-top: 10px;
+  color: #71717a;
+  font-size: 14px;
+}
+
+@keyframes loader-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* search bar */
+.review-search{
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto 30px;
+}
+
+.search-icon{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #71717a;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.review-search input{
+    width: 100%;
+    padding: 14px 18px 14px 46px; /* left padding वाढवली */
+    background: #18181b;
+    color: white;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+    outline: none;
+}
+
+.review-search input:focus{
+    border-color:#8b5cf6;
+}
