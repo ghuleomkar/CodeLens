@@ -26,13 +26,13 @@ const Repository = () => {
 
       try {
         const repositoryResponse = await fetch(
-          `http://localhost:5000/api/repository/${id}`
+          `${import.meta.env.VITE_API_URL}/api/repository/${id}`
         );
 
         const repositoryData = await repositoryResponse.json();
 
         const reviewsResponse = await fetch(
-          `http://localhost:5000/api/repository/${id}/reviews`
+          `${import.meta.env.VITE_API_URL}/api/repository/${id}/reviews`
         );
 
         const reviewsData = await reviewsResponse.json();

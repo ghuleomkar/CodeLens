@@ -28,7 +28,7 @@ const Analyze = () => {
       setLoadingMessage("Fetching repository...");
 
       const response = await fetch(
-        "http://localhost:5000/api/repository/analyze",
+        `${import.meta.env.VITE_API_URL}/api/repository/analyze`,
         {
           method: "POST",
           headers: {
