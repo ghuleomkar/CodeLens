@@ -16,14 +16,27 @@ const parseReview = (reviewText) => {
     /Suggestions:\s*([\s\S]*)/
   );
 
-  const extractItems = (text) => {
-    if (!text) return [];
+  // const extractItems = (text) => {
+  //   if (!text) return [];
 
-    return text
-      .split("\n")
-      .map((line) => line.replace(/^[-*]\s*/, "").trim())
-      .filter(Boolean);
-  };
+  //   return text
+  //     .split("\n")
+  //     .map((line) => line.replace(/^[-*]\s*/, "").trim())
+  //     .filter(Boolean);
+  // };
+  const extractItems = (text) => {
+  if (!text) return [];
+
+  return text
+    .split("\n")
+    .map((line) => line.replace(/^[-*]\s*/, "").trim())
+    .filter(
+      (line) =>
+        line &&
+        line !== "```" &&
+        !line.startsWith("```")
+    );
+};
 
   return {
     summary: summaryMatch?.[1]?.trim() || "",
@@ -226,7 +239,6 @@ const ReviewList = ({ reviews }) => {
                         </div>
 
                         <ul className="review-items">
-
                           {parsedReview.suggestions.map(
                             (suggestion, index) => (
 
@@ -234,13 +246,11 @@ const ReviewList = ({ reviews }) => {
                                 <ReactMarkdown>
                                     {suggestion}
                                 </ReactMarkdown>
-                                
                               </li>
-
                             )
                           )}
-
                         </ul>
+
 
                       </div>
 
