@@ -46,7 +46,31 @@
 
 ## 📷 Screenshots
 
-(Add screenshots here)
+### 🏠 Home Page
+
+![Home](./ScreenShots/Home.png)
+
+### 📝 Register Page
+
+![Register](./ScreenShots/Register.png)
+
+### 🔍 Analyze Repository
+
+![Analyze Repository](./ScreenShots/Analyze.png)
+
+### 📄 File-wise Reviews
+
+![File Reviews](./ScreenShots/FileReviews.png)
+
+### 📊 Repository Summary
+
+![Repository Summary](./ScreenShots/SummaryIssue.png)
+
+### ⚠️ Issues & Suggestions
+
+![Issues & Suggestions](./ScreenShots/issueSuggestions.png)
+
+
 
 ---
 
