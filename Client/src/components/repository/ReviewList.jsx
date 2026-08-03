@@ -16,14 +16,6 @@ const parseReview = (reviewText) => {
     /Suggestions:\s*([\s\S]*)/
   );
 
-  // const extractItems = (text) => {
-  //   if (!text) return [];
-
-  //   return text
-  //     .split("\n")
-  //     .map((line) => line.replace(/^[-*]\s*/, "").trim())
-  //     .filter(Boolean);
-  // };
   const extractItems = (text) => {
   if (!text) return [];
 
