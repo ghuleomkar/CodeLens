@@ -145,4 +145,3 @@ GitHub:
 https://github.com/ghuleomkar
 
 LinkedIn:
-https://www.linkedin.com/in/omkar-ghule-993512345/
