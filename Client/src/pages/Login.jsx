@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../styles/Login.css";
 import { loginUser } from "../api/auth";
@@ -28,7 +28,7 @@ const Login = () => {
         password,
       });
 
-      // AuthContext मधला login function वापर
+      
       login(data.user, data.token);
 
       // Login successful
@@ -88,12 +88,20 @@ const Login = () => {
               : "Login"
             }
           </button>
-
         </form>
 
-      </div>
+        <p className="auth-switch">
+           Don't have an account?
 
+          <Link to="/register">
+          Register
+     </Link>
+   </p>
+
+      </div>
     </main>
+
+    
   );
 };
 

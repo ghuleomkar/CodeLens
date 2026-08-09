@@ -38,7 +38,8 @@ const Register = () => {
       navigate("/login");
 
     } catch (err) {
-      setError("Something went wrong.");
+      // setError("Something went wrong.");
+      setError(err.message);
     }
 
     setLoading(false);

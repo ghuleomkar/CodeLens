@@ -3,9 +3,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
 
-// =========================
-// REGISTER
-// =========================
+// REGISTER // 
 
 const registerUser = async (req, res) => {
   try {
@@ -19,9 +17,10 @@ const registerUser = async (req, res) => {
     }
 
     if (password.length < 6) {
+       
       return res.status(400).json({
         success: false,
-        message: "Password must be at least 6 characters",
+        message: "Password must be at least 7 characters",
       });
     }
 
