@@ -13,9 +13,7 @@ const RepositoryHeader = ({ repository, reviewCount }) => {
             Analysis <span>/</span> Repository
           </div>
 
-          <h1>
-            {repository.name}
-          </h1>
+          <h1>{repository.name}</h1>
 
           <p className="repository-owner">
             @{repository.owner}
@@ -40,7 +38,7 @@ const RepositoryHeader = ({ repository, reviewCount }) => {
             rel="noreferrer"
             className="github-button"
           >
-            View on GitHub ↗
+            View on GitHub <span>↗</span>
           </a>
 
         </div>
@@ -48,12 +46,13 @@ const RepositoryHeader = ({ repository, reviewCount }) => {
       </div>
 
 
-      {/* STATS SECTION - SAME ROW */}
+      {/* STATS */}
       <div className="repository-stats">
 
         <div className="stat-card">
           <span className="stat-label">
-          🌐Language
+            <span className="stat-icon">◉</span>
+            Language
           </span>
 
           <strong>
@@ -64,7 +63,8 @@ const RepositoryHeader = ({ repository, reviewCount }) => {
 
         <div className="stat-card">
           <span className="stat-label">
-            ⭐ Stars
+            <span className="stat-icon">★</span>
+            Stars
           </span>
 
           <strong>
@@ -75,7 +75,8 @@ const RepositoryHeader = ({ repository, reviewCount }) => {
 
         <div className="stat-card">
           <span className="stat-label">
-            🍴 Forks
+            <span className="stat-icon">⑂</span>
+            Forks
           </span>
 
           <strong>
@@ -86,7 +87,8 @@ const RepositoryHeader = ({ repository, reviewCount }) => {
 
         <div className="stat-card">
           <span className="stat-label">
-            📄Files Reviewed
+            <span className="stat-icon">▣</span>
+            Files Reviewed
           </span>
 
           <strong>

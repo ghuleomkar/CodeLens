@@ -1,27 +1,89 @@
+/* =========================================================
+   ANALYZE PAGE
+========================================================= */
+
 .analyze-page {
   min-height: 100vh;
-  padding: 150px 24px;
+
+  padding: 150px 24px 100px;
+
+  display: flex;
+  justify-content: center;
+
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(124, 58, 237, 0.15),
-      transparent 45%
+      rgba(124, 58, 237, 0.16),
+      transparent 42%
     ),
     #09090b;
 }
 
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
 .analyze-container {
+  width: 100%;
   max-width: 850px;
-  margin: auto;
+
+  margin: 0 auto;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .analyze-header {
   text-align: center;
 }
 
+.analyze-header .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 999px;
+
+  color: #c4b5fd;
+  background: rgba(124, 58, 237, 0.07);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.analyze-header .badge-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a78bfa;
+
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.8);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
 .analyze-header h1 {
-  margin-top: 28px;
-  font-size: clamp(42px, 6vw, 70px);
+  margin: 28px 0 0;
+
+  color: #f4f4f5;
+
+  font-size: clamp(44px, 6vw, 70px);
+
+  line-height: 1.05;
+
   letter-spacing: -0.06em;
 }
 
@@ -29,52 +91,161 @@
   color: #a78bfa;
 }
 
-.analyze-header p {
-  max-width: 550px;
+.analyze-header > p {
+  max-width: 570px;
+
   margin: 24px auto 0;
+
   color: #a1a1aa;
-  line-height: 1.7;
+
+  font-size: 15px;
+
+  line-height: 1.75;
 }
 
+
+/* =========================================================
+   REPOSITORY INPUT CARD
+========================================================= */
+
 .repository-input-card {
-  margin-top: 60px;
+  position: relative;
+
+  margin-top: 58px;
+
   padding: 30px;
+
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.035);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.28),
+    0 0 60px rgba(124, 58, 237, 0.04);
+
+  backdrop-filter: blur(12px);
 }
+
+
+/* subtle top glow */
+
+.repository-input-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 15%;
+
+  width: 70%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(167, 139, 250, 0.5),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
 
 .repository-input-card label {
   display: block;
+
   margin-bottom: 12px;
+
   color: #d4d4d8;
+
   font-size: 13px;
   font-weight: 600;
 }
 
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
 .repository-input-wrapper {
+  min-height: 58px;
+
   display: flex;
   align-items: center;
+
   gap: 12px;
-  padding: 8px 8px 8px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  background: #18181b;
+
+  padding: 7px 7px 7px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 11px;
+
+  background: #111113;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
-.github-icon {
-  color: #a78bfa;
-  font-size: 20px;
+.repository-input-wrapper:focus-within {
+  border-color: rgba(167, 139, 250, 0.5);
+
+  background: #141416;
+
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.08),
+    0 0 30px rgba(124, 58, 237, 0.05);
 }
+
+
+/* =========================================================
+   GITHUB ICON
+========================================================= */
+
+.github-icon {
+  width: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #a78bfa;
+
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
 
 .repository-input-wrapper input {
   flex: 1;
+
   min-width: 0;
+
+  height: 42px;
+
   border: none;
   outline: none;
+
   color: #f4f4f5;
+
   background: transparent;
+
+  font-family: inherit;
+
   font-size: 14px;
 }
 
@@ -82,92 +253,241 @@
   color: #52525b;
 }
 
-.repository-input-wrapper button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 7px;
-  color: #09090b;
-  background: #f4f4f5;
-  font-weight: 700;
+.repository-input-wrapper input:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
 }
 
+
+/* =========================================================
+   ANALYZE BUTTON
+========================================================= */
+
+.repository-input-wrapper button {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 19px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+
+  color: #09090b;
+
+  background: #f4f4f5;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.repository-input-wrapper button:hover:not(:disabled) {
+  background: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px rgba(255, 255, 255, 0.08);
+}
+
+.repository-input-wrapper button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.repository-input-wrapper button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   HINT
+========================================================= */
+
 .input-hint {
-  margin-top: 12px;
+  margin: 12px 2px 0;
+
   color: #52525b;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.analyze-loading {
+  margin-top: 20px;
+
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 10px;
+
+  color: #d4d4d8;
+
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.analyze-loading p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #a1a1aa;
+}
+
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  border: 2px solid rgba(255, 255, 255, 0.15);
+
+  border-top-color: #a78bfa;
+
+  border-radius: 50%;
+
+  animation: analyze-spin 0.8s linear infinite;
+}
+
+@keyframes analyze-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.analyze-success {
+  margin-top: 20px;
+
+  padding: 14px 18px;
+
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 10px;
+
+  color: #86efac;
+
+  background: rgba(34, 197, 94, 0.08);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: center;
+
+  animation: analyze-fade-in 0.35s ease;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.analyze-error {
+  margin: 20px 0 0;
+
+  padding: 14px 16px;
+
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: 10px;
+
+  color: #fca5a5;
+
+  background: rgba(248, 113, 113, 0.07);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+@keyframes analyze-fade-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TRUST ITEMS
+========================================================= */
+
+.analyze-trust {
+  margin-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  color: #71717a;
+
   font-size: 11px;
 }
 
-/*  RESPONSIVE */
+.analyze-trust div {
+  display: flex;
+  align-items: center;
 
-@media (max-width: 1000px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions,
-  .hero-trust {
-    justify-content: center;
-  }
-
-  .hero-visual {
-    width: min(520px, 100%);
-  }
+  gap: 7px;
 }
 
-@media (max-width: 700px) {
-  .hero-section {
-    padding: 90px 22px;
-  }
+.analyze-trust span {
+  color: #a78bfa;
 
-  .hero-content h1 {
-    font-size: 48px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .hero-trust {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-heading h2 {
-    font-size: 38px;
-  }
-
-  .repository-input-wrapper {
-    flex-wrap: wrap;
-  }
-
-  .repository-input-wrapper input {
-    width: 70%;
-  }
-
-  .repository-input-wrapper button {
-    width: 100%;
-    justify-content: center;
-  }
+  font-size: 13px;
 }
 
 
-/* REPOSITORY ANALYSIS PAGE */
+/* =========================================================
+   REPOSITORY PAGE
+========================================================= */
 
 .repository-page {
   min-height: 100vh;
+
+  color: #f4f4f5;
+
   background:
     radial-gradient(
       circle at 70% 0%,
@@ -175,74 +495,169 @@
       transparent 35%
     ),
     #09090b;
-  color: #f4f4f5;
 }
 
-.analyze-loading{
-    margin-top:20px;
 
-    display:flex;
-    align-items:center;
-    gap:12px;
+/* =========================================================
+   TABLET
+========================================================= */
 
-    color:#d4d4d8;
+@media (max-width: 768px) {
+
+  .analyze-page {
+    padding:
+      125px
+      20px
+      70px;
+  }
+
+  .analyze-header h1 {
+    font-size: clamp(40px, 10vw, 58px);
+  }
+
+  .analyze-header > p {
+    margin-top: 20px;
+
+    font-size: 14px;
+  }
+
+  .repository-input-card {
+    margin-top: 42px;
+
+    padding: 22px;
+
+    border-radius: 15px;
+  }
+
+  .repository-input-wrapper {
+    flex-wrap: wrap;
+
+    padding: 8px;
+  }
+
+  .github-icon {
+    width: 24px;
+  }
+
+  .repository-input-wrapper input {
+    width: calc(100% - 45px);
+
+    height: 42px;
+  }
+
+  .repository-input-wrapper button {
+    width: 100%;
+
+    min-height: 46px;
+  }
+
+  .input-hint {
+    line-height: 1.6;
+  }
+
+  .analyze-trust {
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 24px;
+  }
+
 }
 
-.loading-spinner{
-    width:18px;
-    height:18px;
 
-    border:2px solid rgba(255,255,255,.2);
-    border-top:2px solid #8b5cf6;
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-    border-radius:50%;
+@media (max-width: 480px) {
 
-    animation:spin .8s linear infinite;
-}
+  .analyze-page {
+    padding:
+      112px
+      16px
+      60px;
+  }
 
-@keyframes spin{
+  .analyze-header .hero-badge {
+    padding: 7px 10px;
 
-    from{
-        transform:rotate(0deg);
-    }
+    font-size: 8px;
+  }
 
-    to{
-        transform:rotate(360deg);
-    }
+  .analyze-header h1 {
+    margin-top: 22px;
 
-}
+    font-size: 38px;
 
-.analyze-success{
+    line-height: 1.08;
+  }
 
-    margin-top:20px;
+  .analyze-header > p {
+    font-size: 13px;
 
-    padding:14px 18px;
+    line-height: 1.7;
+  }
 
-    border-radius:10px;
+  .repository-input-card {
+    margin-top: 35px;
 
-    background:rgba(34,197,94,.12);
+    padding: 18px;
 
-    border:1px solid rgba(34,197,94,.35);
+    border-radius: 14px;
+  }
 
-    color:#86efac;
+  .repository-input-card label {
+    font-size: 12px;
+  }
 
-    font-weight:600;
+  .repository-input-wrapper {
+    gap: 8px;
 
-    text-align:center;
+    padding: 7px;
+  }
 
-    animation:fadeIn .35s ease;
-}
+  .github-icon {
+    width: 22px;
 
-@keyframes fadeIn{
+    font-size: 17px;
+  }
 
-    from{
-        opacity:0;
-        transform:translateY(8px);
-    }
+  .repository-input-wrapper input {
+    width: calc(100% - 38px);
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    font-size: 12px;
+  }
+
+  .repository-input-wrapper input::placeholder {
+    font-size: 11px;
+  }
+
+  .repository-input-wrapper button {
+    font-size: 12px;
+  }
+
+  .input-hint {
+    font-size: 10px;
+  }
+
+  .analyze-loading {
+    padding: 12px;
+
+    gap: 10px;
+  }
+
+  .analyze-loading p {
+    font-size: 11px;
+  }
+
+  .analyze-success,
+  .analyze-error {
+    font-size: 11px;
+  }
+
+  .analyze-trust {
+    font-size: 10px;
+  }
 
 }
