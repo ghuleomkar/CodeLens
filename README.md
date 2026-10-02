@@ -56,7 +56,7 @@
 ![Repository Analysis](ScreenShots/Repository-Analysis.png)
 
 ### 🧠 Code Review
-![Code Review](screenShots/image.png)
+![Code Review](ScreenShots/image.png)
 
 
 
