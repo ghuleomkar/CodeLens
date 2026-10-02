@@ -20,7 +20,7 @@ const registerUser = async (req, res) => {
        
       return res.status(400).json({
         success: false,
-        message: "Password must be at least 7 characters",
+        message: "Password must be at least 6 characters",
       });
     }
 
@@ -62,9 +62,7 @@ const registerUser = async (req, res) => {
 };
 
 
-// =========================
-// LOGIN
-// =========================
+//  LOGIN // 
 
 const loginUser = async (req, res) => {
   try {

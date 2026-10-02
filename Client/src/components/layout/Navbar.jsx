@@ -31,9 +31,6 @@ const Navbar = () => {
           className="logo"
           onClick={closeMenu}
         >
-          {/* <div className="Navbar-logo">
-            Code<span>Lens</span>
-          </div> */}
 
           <div className="Navbar-logo">
   <CodeLensLogo size={32} />

@@ -19,7 +19,7 @@ const analyzeRepository = async (req, res) => {
     }
 
 
-    // Basic GitHub url validation
+    // Basic GitHub url validation  , format is right or wrong checking ex: github.com/username/repo
     const githubRegex = /^https:\/\/github\.com\/[^\/]+\/[^\/]+\/?$/;
 
     if (!githubRegex.test(url)) {

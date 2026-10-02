@@ -46,29 +46,17 @@
 
 ## 📷 Screenshots
 
-### 🏠 Home Page
-
-![Home](./ScreenShots/Home.png)
-
-### 📝 Register Page
-
-![Register](./ScreenShots/Register.png)
+### 🏠 Home
+![CodeLens Home](ScreenShots/Home.png)
 
 ### 🔍 Analyze Repository
+![Analyze Repository](ScreenShots/Analyze.png)
 
-![Analyze Repository](./ScreenShots/Analyze.png)
+### 📊 Repository Analysis
+![Repository Analysis](ScreenShots/Repository-Analysis.png)
 
-### 📄 File-wise Reviews
-
-![File Reviews](./ScreenShots/FileReviews.png)
-
-### 📊 Repository Summary
-
-![Repository Summary](./ScreenShots/SummaryIssue.png)
-
-### ⚠️ Issues & Suggestions
-
-![Issues & Suggestions](./ScreenShots/issueSuggestions.png)
+### 🧠 Code Review
+![Code Review](screenshots/image.png)
 
 
 

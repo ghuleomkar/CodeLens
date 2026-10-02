@@ -18,7 +18,7 @@ const RepositoryNavbar = () => {
 
         <span className="analysis-status">
           <span className="status-dot"></span>
-          Analysis complete
+          {/* Analysis complete */}
         </span>
 
         <Link to="/analyze" className="new-analysis-button">
